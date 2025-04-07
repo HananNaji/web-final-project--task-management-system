@@ -1,0 +1,539 @@
+body {
+  background-color: #0c4aa8; /* خلفية أساسية */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #0c1618; /* لون النصوص */
+
+}
+label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #555;
+  font-size: 35px; /* حجم الخط */
+}
+
+
+/* تنسيق الهيدر */
+header {
+  background-color: #1a1198; /* لون داكن للهيدر */
+  color: rgb(3, 11, 15);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 44px; /* حجم الخط */
+
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav a {
+  color: white; /* لون الروابط في الهيدر */
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+  font-size: 35px; /* حجم الخط */
+
+}
+
+header nav a:hover {
+  color: #00bfff;
+  font-size: 35px; /* حجم الخط */
+
+}
+.task-details, .team-members {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container2 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* تنسيق الحاوية */
+.container {
+  display: flex;
+  flex: 1;
+  font-size: 35px; /* حجم الخط */
+
+  height: calc(100vh - 60px); /* ارتفاع الشاشة الكامل مطروحًا منه ارتفاع الهيدر */
+}
+
+/* تنسيق شريط التنقل الجانبي */
+nav.sidebar {
+  width: 600px;
+  background: #f4f4f4;
+  padding: 20px;
+
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+nav.sidebar a {
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  color: #333333;
+  font-size: 35px; /* حجم الخط */
+
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav.sidebar a:hover {
+  background-color: #5563df;
+  font-weight: bold;
+
+}
+
+nav.sidebar a.active {
+  background-color: #007bff;
+  color: white;
+
+  font-weight: bold;
+}
+
+/* تنسيق القسم الرئيسي */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #e9f5ff;
+  overflow: auto; /* إذا كان المحتوى أطول من الشاشة */
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #0a3561;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 40px; /* حجم الخط */
+  margin-top: auto;
+}
+
+footer a {
+  color: #00bfff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* تحسين الحركات */
+a, button {
+  transition: all 0.3s ease;
+}
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 900px;
+  max-height: 100%;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 40px; /* حجم الخط */
+
+}
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 38px;
+}
+/* تنسيق الجداول */
+.zebra-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.zebra-table th, 
+.zebra-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.zebra-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.zebra-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* لون الصفوف الزوجية */
+}
+
+.zebra-table tr:nth-child(odd) {
+    background-color: #fff; /* لون الصفوف الفردية */
+}
+
+/* تنسيق الزر */
+.btn-confirm {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover {
+    background-color: #45a049;
+}
+
+/* تنسيق النصوص */
+p, h1, h2 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+/* تحسينات النماذج */
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* تنسيق الجدول */
+table {
+  width: 100%;
+  border-collapse: collapse; /* إزالة المسافات بين الخلايا */
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* حدود الخلايا */
+table th, table td {
+  border: 1px solid #ccc; /* إضافة حدود ناعمة */
+  padding: 10px; /* مسافة داخلية */
+  text-align: left; /* محاذاة النصوص */
+}
+
+/* تنسيق العناوين */
+table th {
+  background-color: #f2f2f2; /* لون خلفية للعناوين */
+  font-weight: bold;
+}
+
+/* زخرفة الصفوف (Zebra Style) */
+table tr:nth-child(even) {
+  background-color: #f9f9f9; /* لون خلفية للصفوف الزوجية */
+}
+
+table tr:hover {
+  background-color: #f1f1f1; /* لون عند تمرير الماوس */
+}
+
+/* تنسيق الزر */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-size: 35px;
+  border-radius: 6px;
+}
+h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.team-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.nav-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.profile h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  text-align: center;
+  margin: 5px 0;
+}
+input[type="date"] {
+  font-size: 18px; /* حجم النص */
+  padding: 10px; /* مسافة داخلية */
+  width: 200px; /* عرض الحقل */
+  height: 50px; /* ارتفاع الحقل */
+  border-radius: 5px; /* زوايا مستديرة */
+  border: 1px solid #ccc; /* حدود */
+}
+
+/* تحسين شكل الحقل عند التركيز */
+input[type="date"]:focus {
+  outline: none;
+  border-color: #007bff; /* لون الحدود عند التركيز */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* تأثير الإضاءة */
+}
+
+/* تكبير واجهة التقويم (Dropdown) */
+::-webkit-calendar-picker-indicator {
+  width: 40px; /* عرض المؤشر */
+  height: 40px; /* ارتفاع المؤشر */
+  cursor: pointer;
+}
+.success {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.task-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.team-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.team-photo:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table .status-in-progress {
+  font-weight: bold;
+  color: #0056b3;
+}
+.sidebar {
+  width: 20%;
+  float: left;
+  background-color: #f4f4f4;
+  height: 100vh;
+  padding: 10px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content {
+  width: 80%;
+  padding: 20px;
+}
+/* تصميم الجدول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+/* تأثير Hover */
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* تنسيقات النصوص */
+.in-progress {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.completed {
+  text-decoration: line-through;
+  border: 2px solid green;
+}
+
+.pending {
+  font-style: italic;
+  background-color: #e0e0e0;
+}
+
+/* تنسيق الصور */
+.team-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* الحاوية العامة */
+.container2 {
+  margin: 20px auto;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* عناوين الأقسام */
+h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+/* الجدول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* الصور */
+.team-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.team-photo:hover {
+  border-color: #007BFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* النصوص */
+.in-progress {
+  font-weight: bold;
+  color: #007BFF;
+}
+form input.error-field {
+  border: 2px solid red;
+}
